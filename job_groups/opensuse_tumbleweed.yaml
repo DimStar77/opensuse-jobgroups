@@ -145,6 +145,10 @@ products:
     distri: opensuse
     flavor: WSL
     version: Tumbleweed
+  opensuse-Tumbleweed-offline-installer-x86_64:
+    distri: opensuse
+    flavor: offline-installer
+    version: Tumbleweed
   opensuse-Tumbleweed-agama-installer-x86_64:
     distri: opensuse
     flavor: agama-installer
@@ -2003,6 +2007,25 @@ scenarios:
           settings:
             <<: *wsl2_settings
             WSL_SYSTEMD: '1'
+    opensuse-Tumbleweed-offline-installer-x86_64:
+      - gnome:
+          machine: uefi-3G
+          settings:
+            <<: *agama
+      - gnome:
+          machine: uefi-usb-4G
+          settings:
+            <<: *agama
+            BOOTFROM: c
+      - kde:
+          machine: uefi-3G
+          settings:
+            <<: *agama
+      - kde:
+          machine: uefi-usb-4G
+          settings:
+            <<: *agama
+            BOOTFROM: c
     opensuse-Tumbleweed-agama-installer-x86_64:
       - create_hdd_agama_gnome:
           machine: uefi-3G
