@@ -2451,6 +2451,8 @@ scenarios:
           machine: 64bit
       - zdup-Leap-15.6-gnome:
           machine: 64bit
+      - zdup-Leap-16.1-gnome:
+          machine: uefi-3G
     aeon-*-Installer-x86_64:
       - aeon_tests:
           machine: uefi
